@@ -22,7 +22,7 @@ var nameLookup = (code) => {
    }
 };
 
-var defaultText = '<p>Get more inormation about </p>'
+var defaultText = '<p> Get more inormation about the statistics of each province. </p>'
 $('#feature-info').html(defaultText)
 
 var initOptions = {
@@ -42,7 +42,7 @@ map.on('style.load', function() {
   // add a geojson source to the map using our external geojson file
   map.addSource('fill-map-province', {
     type: 'geojson',
-    data: 'china.geojson',
+    data: './china.geojson',
   });
 
   // let's make sure the source got added by logging the current map state to the console
@@ -56,7 +56,7 @@ map.on('style.load', function() {
     paint: {
       'fill-color': {
         type: 'categorical',
-        property: 'name',
+        property: 'id',
         stops: [
           [
             'Hubei',
@@ -107,7 +107,7 @@ map.on('style.load', function() {
       var featureInfo = `
         <h4>${hoveredFeature.properties.Address}</h4>
         <p><strong>Province:</strong> ${nameLookup(parseInt(hoveredFeature.properties.name)).description}</p>
-        // <p><strong>Zoning:</strong> ${hoveredFeature.properties.ZoneDist1}</p>
+       
       `
       $('#feature-info').html(featureInfo)
 
