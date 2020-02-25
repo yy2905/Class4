@@ -42,7 +42,7 @@ map.on('style.load', function() {
   // add a geojson source to the map using our external geojson file
   map.addSource('fill-map-province', {
     type: 'geojson',
-    data: './china.geojson',
+    data: 'china.geojson',
   });
 
   // let's make sure the source got added by logging the current map state to the console
