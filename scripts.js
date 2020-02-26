@@ -42,7 +42,7 @@ var map = new mapboxgl.Map(initOptions);
 
 // add zoom and rotation controls to the map.
 map.addControl(new mapboxgl.NavigationControl());
-/*
+
 // wait for the initial style to Load
 map.on('style.load', function() {
 
@@ -51,7 +51,8 @@ map.on('style.load', function() {
     type: 'geojson',
     data: './china.geojson',
   });
-
+})
+ /*
   // let's make sure the source got added by logging the current map state to the console
   console.log(map.getStyle().sources)
 
