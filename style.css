@@ -29,7 +29,7 @@ h3 {
 /* buttons with white bold text */
 .flyto-button {
   background: #0084aa;
-  color: #FFF8DC;
+  color: 	#8B658B; /*DarkGoldenrod4*/
   padding: 12px;
   border: none;
   font-weight: 500;
@@ -41,11 +41,11 @@ h3 {
 /* on hover, make the background darker and turn the cursor to a pointer */
 button:hover {
   cursor: pointer;
-  background-color: #CDC8B1;
+  background-color: #CD96CD;
 }
 
 #feature-info {
-  background: #EEE8CD;
+  background: #EED2EE;
   padding: 15px;
   min-height: 150px;
 }
