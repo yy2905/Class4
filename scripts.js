@@ -376,7 +376,7 @@ map.on('style.load', function() {
         ]
       }
     }
-  })
+  });
   
     // add a layer for provincal borders
     map.addLayer({
@@ -384,17 +384,16 @@ map.on('style.load', function() {
       type: 'line',
       source: 'NHFPC',
       before:['fill-map-province'],
-      layout: {
-        'visibility': 'visible',
-        'line-join': 'round',
-        'line-cap': 'round'
-          },
+    //  layout: {
+    //    'visibility': 'visible',
+    //    'line-join': 'round',
+    //    'line-cap': 'round'
+    //      },
       paint: {
         'line-color': 'white',
         'line-width': 1,
-        'line-opacity': 0.9,
           }
-    })
+    });
 
   map.addSource('highlight-feature', {
     type: 'geojson',
@@ -402,7 +401,7 @@ map.on('style.load', function() {
       type: 'FeatureCollection',
       features: []
     }
-  })
+  });
   
   map.addLayer({
     id: 'highlight-line',
