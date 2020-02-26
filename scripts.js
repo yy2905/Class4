@@ -9,32 +9,184 @@ var initialZoom = 3.5
 // a helper function for Lookup for looking up all the provinces and their status quo
 var nameLookup = (code) => {
   switch (code) {
+     //>10,000
     case 1:
       return {
         color: '#8B3626', 
         description: 'Hubei',
       };
+     //1,000-9,999
     case 2:
       return {
         color: '#CD4F39',
-        description: 'Guangdong', 'Zhejiang', 'Hunan', 'Henan',
+        description: 'Guangdong',
       };
     case 3:
       return {
-        color: '#EE5C42',
-        description: 'Shandong', 'Anhui','Sichuan', 'Jiangxi', 'Chongqing', 'Jiangsu',
-      };
+        color: '#CD4F39',
+        description:'Zhejiang',
+      };  
     case 4:
       return {
-        color: '#FF6347',
-        description: 'Beijing', 'Heilongjiang', 'Guangxi', 'Fujian', 'Shanghai', 'Hebei', 'Shaanxi', 'Tianjin', 'Guizhou', 'Hainan', 'Liaoning', 'Shanxi', 'Yunnan',
-      };
+        color: '#CD4F39',
+        description:'Hunan',
+      };  
     case 5:
       return {
-        color: '#fed0c8',
-        description: 'Hong Kong', 'Xinjiang', 'Inner Mongolia', 'Jilin', 'Taiwan', 'Gansu', 'Ningxia', 'Macau', 'Qinghai',
-      };
+        color: '#CD4F39',
+        description:'Henan',
+      };  
+     //500-999
     case 6:
+      return {
+        color: '#EE5C42',
+        description: 'Shandong',
+      };
+    case 7:
+      return {
+        color: '#EE5C42',
+        description:'Anhui',
+      };  
+    case 8:
+      return {
+        color: '#EE5C42',
+        description:'Sichuan',
+      };  
+    case 9:
+      return {
+        color: '#EE5C42',
+        description:'Jiangxi',
+      };  
+    case 10:
+      return {
+        color: '#EE5C42',
+        description:'Chongqing',
+      }; 
+    case 11:
+      return {
+        color: '#EE5C42',
+        description:'Jiangsu',
+      };  
+     
+      //100-499
+    case 12:
+      return {
+        color: '#FF6347',
+        description: 'Beijing',
+      };  
+    case 13:
+      return {
+        color: '#FF6347', 
+        description: 'Heilongjiang',
+       }; 
+    case 14:
+      return {
+        color: '#FF6347', 
+        description:'Guangxi',
+       }; 
+    case 15:
+      return {
+        color: '#FF6347', 
+        description:'Fujian',
+       }; 
+    case 16:
+      return {
+        color: '#FF6347', 
+        description:'Shanghai',
+      };
+    case 17:
+      return {
+        color: '#FF6347', 
+        description:'Hebei',
+      };
+    case 18:
+      return {
+        color: '#FF6347', 
+        description:'Shaanxi',
+      }; 
+    case 19:
+      return {
+        color: '#FF6347',
+        description:'Tianjin',
+      };    
+ 
+    case 20:
+      return {
+        color: '#FF6347',
+        description:'Guizhou',
+      };   
+    case 21:
+      return {
+        color: '#FF6347',
+        description:'Hainan',
+      };  
+    case 22:
+      return {
+        color: '#FF6347',
+        description:'Liaoning',
+      };  
+    case 23:
+      return {
+        color: '#FF6347',
+        description:'Shanxi',
+      };  
+   case 24:
+      return {
+        color: '#FF6347',
+        description:'Yunnan',
+      };
+  
+     //10-99 
+      
+ 
+    case 25:
+      return {
+        color: '#fed0c8',
+        description: 'Hong Kong',
+      };
+    case 26:
+      return {
+        color: '#fed0c8',
+        description:'Xinjiang',
+      };  
+    case 27:
+      return {
+        color: '#fed0c8',
+        description:'Inner Mongolia',
+      };  
+    case 28:
+      return {
+        color: '#fed0c8',
+        description: 'Jilin',
+      };
+    case 29:
+      return {
+        color: '#fed0c8',
+        description: 'Taiwan',
+      };  
+    case 30:
+      return {
+        color: '#fed0c8',
+        description:'Gansu',
+      };  
+    case 31:
+      return {
+        color: '#fed0c8',
+        description: 'Ningxia',
+      };  
+    case 32:
+      return {
+        color: '#fed0c8',
+        description:'Macau',
+      };   
+    case 33:
+      return {
+        color: '#fed0c8',
+        description:'Qinghai',
+      };   
+      
+     //1 
+    case 34:
       return {
         color: '#fffbfa',
         description: 'Tibet',
@@ -90,24 +242,136 @@ map.on('style.load', function() {
             nameLookup(1).color,
           ],
           [
-            'Guangdong', 'Zhejiang', 'Hunan', 'Henan',
+            'Guangdong',
             nameLookup(2).color,
           ],
           [
-            'Shandong', 'Anhui', 'Sichuan', 'Jiangxi', 'Chongqing', 'Jiangsu',
+            'Zhejiang',
             nameLookup(3).color,
           ],
           [
-            'Beijing' 'Heilongjiang', 'Guangxi', 'Fujian', 'Shanghai', 'Hebei', 'Shaanxi', 'Tianjin', 'Guizhou', 'Hainan', 'Liaoning', 'Shanxi', 'Yunnan',
+            'Hunan',
             nameLookup(4).color,
           ],
           [
-            'Hong Kong', 'Xinjiang', 'Inner Mongolia', 'Jilin', 'Taiwan', 'Gansu', 'Ningxia', 'Macau', 'Qinghai',
+            'Henan',
             nameLookup(5).color,
           ],
+           [
+            'Shandong',
+            nameLookup(6).color,
+          ],
+           [
+            'Anhui',
+            nameLookup(7).color,
+          ],
+           [
+            'Sichuan',
+            nameLookup(8).color,
+          ],
+           [
+            'Jiangxi',
+            nameLookup(9).color,
+          ],
+           [
+            'Chongqing',
+            nameLookup(10).color,
+          ],
+           [
+            'Jiangsu',
+            nameLookup(11).color,
+          ],
+          [
+            'Beijing',
+            nameLookup(12).color,
+          ],
+          [
+            'Heilongjiang',
+            nameLookup(13).color,
+          ],
+          [
+            'Guangxi',
+            nameLookup(14).color,
+          ],
+          [
+            'Fujian',
+            nameLookup(15).color,
+          ],
+          [
+            'Shanghai',
+            nameLookup(16).color,
+          ],
+          [
+            'Hebei',
+            nameLookup(17).color,
+          ],
+          [
+            'Shaanxi',
+            nameLookup(18).color,
+          ],
+          [
+            'Tianjin',
+            nameLookup(19).color,
+          ],
+          [
+            'Guizhou',
+            nameLookup(20).color,
+          ],
+          [
+            'Hainan',
+            nameLookup(21).color,
+          ],
+          [
+            'Liaoning',
+            nameLookup(22).color,
+          ],
+          [
+            'Shanxi',
+            nameLookup(23).color,
+          ],
+          [
+            'Yunnan',
+            nameLookup(24).color,
+          ],
+          [
+            'Hong Kong',
+            nameLookup(25).color,
+          ],
+          [
+            'Xinjiang',
+            nameLookup(26).color,
+          ],
+          [
+            'Inner Mongolia',
+            nameLookup(27).color,
+          ],
+          [
+            'Jilin',
+            nameLookup(28).color,
+          ],
+          [
+            'Taiwan',
+            nameLookup(29).color,
+          ],
+          [
+            'Gansu',
+            nameLookup(30).color,
+          ],
+          [
+            'Ningxia',
+            nameLookup(31).color,
+          ],
+          [
+            'Macau',
+            nameLookup(32).color,
+          ],
+          [
+            'Qinghai',
+            nameLookup(33).color,
+          ],   
           [
             'Tibet',
-            nameLookup(6).color,
+            nameLookup(34).color,
           ],
         ]
       }
