@@ -395,7 +395,22 @@ map.on('style.load', function() {
       'line-opacity': 0.9,
       'line-color': 'white',
         }
-  });
+  })
+  
+  map.addLayer({
+    'id': 'fill-map-province',
+    'type': 'line',
+     'source': 'fill-map-province',
+    'layout': {
+    'visibility': 'visible',
+    'line-join': 'round',
+    'line-cap': 'round'
+        },
+     'paint': {
+    'line-color': 'white',
+    'line-width': 1
+        }
+});
   
   // listen for the mouse moving over the map and react when the cursor is over our data
 
