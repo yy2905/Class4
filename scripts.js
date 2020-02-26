@@ -3,7 +3,7 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiY3dob25nLXFyaSIsImEiOiJjazZncWRkZGowb3kyM25vZXkwbms2cW0xIn0.lbwola6y7YDdaKLMdjif1g';
 
 // set central points and z-level 
-var initialCenterPoint = [105.3414953, 35.1341374]
+var initialCenterPoint = [105.3414953, 37.1341374]
 var initialZoom = 3.5
 
 // a helper function for Lookup for looking up all the provinces and their status quo
@@ -11,13 +11,33 @@ var nameLookup = (code) => {
   switch (code) {
     case 1:
       return {
-        color: '#8B0000', 
+        color: '#8B3626', 
         description: 'Hubei',
       };
     case 2:
       return {
-        color: '#CD3700',
-        description: 'Henan',
+        color: '#CD4F39',
+        description: 'Guangdong' 'Zhejiang' 'Hunan' 'Henan',
+      };
+    case 3:
+      return {
+        color: '#EE5C42',
+        description: 'Shandong' 'Anhui' 'Sichuan' 'Jiangxi' 'Chongqing' 'Jiangsu',
+      };
+    case 4:
+      return {
+        color: '#FF6347',
+        description: 'Beijing' 'Heilongjiang' 'Guangxi' 'Fujian' 'Shanghai' 'Hebei' 'Shaanxi' 'Tianjin' 'Guizhou' 'Hainan' 'Liaoning' 'Shanxi' 'Yunnan',
+      };
+    case 5:
+      return {
+        color: '#fed0c8',
+        description: 'Hong Kong' 'Xinjiang' 'Inner Mongolia' 'Jilin' 'Taiwan' 'Gansu' 'Ningxia' 'Macau' 'Qinghai',
+      };
+    case 6:
+      return {
+        color: '#fffbfa',
+        description: 'Tibet',
       };
     default:
       return {
@@ -70,8 +90,24 @@ map.on('style.load', function() {
             nameLookup(1).color,
           ],
           [
-            'Henan',
+            'Guangdong' 'Zhejiang' 'Hunan' 'Henan',
             nameLookup(2).color,
+          ],
+          [
+            'Shandong' 'Anhui' 'Sichuan' 'Jiangxi' 'Chongqing' 'Jiangsu',
+            nameLookup(3).color,
+          ],
+          [
+            'Beijing' 'Heilongjiang' 'Guangxi' 'Fujian' 'Shanghai' 'Hebei' 'Shaanxi' 'Tianjin' 'Guizhou' 'Hainan' 'Liaoning' 'Shanxi' 'Yunnan',
+            nameLookup(4).color,
+          ],
+          [
+            'Hong Kong' 'Xinjiang' 'Inner Mongolia' 'Jilin' 'Taiwan' 'Gansu' 'Ningxia' 'Macau' 'Qinghai',
+            nameLookup(5).color,
+          ],
+          [
+            'Tibet',
+            nameLookup(6).color,
           ],
         ]
       }
