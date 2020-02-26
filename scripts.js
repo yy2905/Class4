@@ -397,6 +397,11 @@ map.on('style.load', function() {
         }
   })
   
+  map.addSource('NHFPC', {
+    type: 'geojson',
+    data: './china.geojson',
+  });
+  
   map.addLayer({
     id: 'fill-map-province',
     type: 'line',
@@ -411,7 +416,7 @@ map.on('style.load', function() {
       'line-width': 1,
       'line-opacity': 0.9,
         }
-});
+})
   
   // listen for the mouse moving over the map and react when the cursor is over our data
 
