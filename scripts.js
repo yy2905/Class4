@@ -227,23 +227,6 @@ map.on('style.load', function() {
   // let's make sure the source got added by logging the current map state to the console
   console.log(map.getStyle().sources)
 
-  // add a layer for provincal borders
-  map.addLayer({
-    id:'line-map-province',
-    type: 'line',
-    source: 'NHFPC',
-    layout: {
-      'visibility': 'visible',
-      'line-join': 'round',
-      'line-cap': 'round'
-        },
-    paint: {
-      'line-color': 'white',
-      'line-width': 1,
-      'line-opacity': 0.9,
-        }
-  })
-
   // add  layer for filling different provinces
   map.addLayer({
     id: 'fill-map-province',
@@ -394,6 +377,24 @@ map.on('style.load', function() {
       }
     }
   })
+  
+    // add a layer for provincal borders
+    map.addLayer({
+      id:'line-map-province',
+      type: 'line',
+      source: 'NHFPC',
+      before:['fill-map-province']
+      layout: {
+        'visibility': 'visible',
+        'line-join': 'round',
+        'line-cap': 'round'
+          },
+      paint: {
+        'line-color': 'white',
+        'line-width': 1,
+        'line-opacity': 0.9,
+          }
+    })
 
   map.addSource('highlight-feature', {
     type: 'geojson',
