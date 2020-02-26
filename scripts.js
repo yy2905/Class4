@@ -114,7 +114,7 @@ map.on('style.load', function() {
       var featureInfo = `
         <h4>${hoveredFeature.properties.name}</h4>
         <p><strong>Total Confirmed Cases:</strong> ${hoveredFeature.properties.TCC}</p>
-        <p><strong>Cured Cases:</strong> ${hoveredFeature.properties.TCC}</p>
+        <p><strong>Cured Cases:</strong> ${hoveredFeature.properties.CC}</p>
 
       `
       $('#feature-info').html(featureInfo)
