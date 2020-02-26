@@ -51,8 +51,7 @@ map.on('style.load', function() {
     type: 'geojson',
     data: './china.geojson',
   });
-})
- /*
+ 
   // let's make sure the source got added by logging the current map state to the console
   console.log(map.getStyle().sources)
 
@@ -78,7 +77,8 @@ map.on('style.load', function() {
       }
     }
   })
-
+})
+/*
   map.addSource('highlight-feature', {
     type: 'geojson',
     data: {
