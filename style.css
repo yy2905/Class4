@@ -8,13 +8,13 @@ body {
   padding: 0;
 }
 
-/* absolute position the map container as full screen, leaving 300 pixels on the right */
+/* absolute position the map container as full screen, leaving 300 pixels on the left */
 #map-container {
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 300px;
-  left: 0;
+  right: 0;
+  left: 300px;
 }
 
 h3 {
