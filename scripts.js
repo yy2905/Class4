@@ -383,7 +383,7 @@ map.on('style.load', function() {
       id:'line-map-province',
       type: 'line',
       source: 'NHFPC',
-      before:['fill-map-province']
+      before:['fill-map-province'],
       layout: {
         'visibility': 'visible',
         'line-join': 'round',
