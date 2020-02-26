@@ -402,13 +402,14 @@ map.on('style.load', function() {
     type: 'line',
     source: 'fill-map-province',
     layout: {
-    visibility: 'visible',
-    line-join: 'round',
-    line-cap:'round'
+      'visibility': 'visible',
+      'line-join': 'round',
+      'line-cap':'round'
         },
     paint: {
-    line-color: 'white',
-    line-width: 1
+      'line-color': 'white',
+      'line-width': 1,
+      'line-opacity': 0.9,
         }
 });
   
