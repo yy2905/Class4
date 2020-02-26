@@ -19,6 +19,11 @@ var nameLookup = (code) => {
         color: '#CD3700',
         description: 'Henan',
       };
+    default:
+      return {
+        color: '#FFFFFF',
+        description: 'other',
+      };
    }
 };
 
@@ -30,7 +35,7 @@ var initOptions = {
   style: 'mapbox://styles/mapbox/dark-v10', // use this basemap
   center: initialCenterPoint, // initial view center
   zoom: initialZoom, // initial view zoom level (0-18)
-  
+}
   var map = new mapboxgl.Map(initOptions);
 
 // add zoom and rotation controls to the map.
@@ -40,9 +45,9 @@ map.addControl(new mapboxgl.NavigationControl());
 map.on('style.load', function() {
 
   // add a geojson source to the map using our external geojson file
-  map.addSource('fill-map-province', {
+  map.addSource('NHFPC', {
     type: 'geojson',
-    data: 'china.geojson',
+    data: './china.geojson',
   });
 
   // let's make sure the source got added by logging the current map state to the console
@@ -56,7 +61,7 @@ map.on('style.load', function() {
     paint: {
       'fill-color': {
         type: 'categorical',
-        property: 'id',
+        property: 'name',
         stops: [
           [
             'Hubei',
