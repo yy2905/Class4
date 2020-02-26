@@ -3,7 +3,7 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiY3dob25nLXFyaSIsImEiOiJjazZncWRkZGowb3kyM25vZXkwbms2cW0xIn0.lbwola6y7YDdaKLMdjif1g';
 
 // set central points and z-level 
-var initialCenterPoint = [35.1341374, 105.3414953]
+var initialCenterPoint = [105.3414953, 35.1341374]
 var initialZoom = 3.5
 
 // a helper function for Lookup for looking up all the provinces and their status quo
