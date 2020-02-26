@@ -45,7 +45,7 @@ map.addControl(new mapboxgl.NavigationControl());
 
 // wait for the initial style to Load
 map.on('style.load', function() {
-/*
+
   // add a geojson source to the map using our external geojson file
   map.addSource('NHFPC', {
     type: 'geojson',
@@ -78,7 +78,6 @@ map.on('style.load', function() {
     }
   })
 
-*/
   map.addSource('highlight-feature', {
     type: 'geojson',
     data: {
