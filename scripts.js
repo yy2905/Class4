@@ -384,7 +384,7 @@ map.on('style.load', function() {
       type: 'FeatureCollection',
       features: []
     }
-  })
+  });
   
   map.addLayer({
     id: 'highlight-line',
