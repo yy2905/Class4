@@ -54,7 +54,7 @@ map.on('style.load', function() {
 
   // let's make sure the source got added by logging the current map state to the console
   console.log(map.getStyle().sources)
-/*
+
   // add a layer for our custom source
   map.addLayer({
     id: 'fill-map-province',
@@ -77,7 +77,7 @@ map.on('style.load', function() {
       }
     }
   })
-*/
+/*
   map.addSource('highlight-feature', {
     type: 'geojson',
     data: {
@@ -133,6 +133,6 @@ map.on('style.load', function() {
       $('#feature-info').html(defaultText)
     }
   })
-
+*/
 })
 
