@@ -113,8 +113,9 @@ map.on('style.load', function() {
       var hoveredFeature = features[0]
       var featureInfo = `
         <h4>${hoveredFeature.properties.name}</h4>
-        <p><strong>Name:</strong> ${nameLookup(parseInt(hoveredFeature.properties.name)).description}</p>
         <p><strong>Total Confirmed Cases:</strong> ${hoveredFeature.properties.TCC}</p>
+        <p><strong>Cured Cases:</strong> ${hoveredFeature.properties.TCC}</p>
+
       `
       $('#feature-info').html(featureInfo)
 
