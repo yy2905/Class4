@@ -36,7 +36,9 @@ var initOptions = {
   center: initialCenterPoint, // initial view center
   zoom: initialZoom, // initial view zoom level (0-18)
 }
-  var map = new mapboxgl.Map(initOptions);
+
+// create the new map
+var map = new mapboxgl.Map(initOptions);
 
 // add zoom and rotation controls to the map.
 map.addControl(new mapboxgl.NavigationControl());
@@ -52,7 +54,7 @@ map.on('style.load', function() {
 
   // let's make sure the source got added by logging the current map state to the console
   console.log(map.getStyle().sources)
-
+/*
   // add a layer for our custom source
   map.addLayer({
     id: 'fill-map-province',
@@ -133,3 +135,4 @@ map.on('style.load', function() {
   })
 
 })
+*/
