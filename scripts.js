@@ -77,7 +77,7 @@ map.on('style.load', function() {
       }
     }
   })
-  
+*/
   map.addSource('highlight-feature', {
     type: 'geojson',
     data: {
@@ -133,6 +133,6 @@ map.on('style.load', function() {
       $('#feature-info').html(defaultText)
     }
   })
-*/
+
 })
 
