@@ -240,13 +240,13 @@ map.on('style.load', function() {
         }
     })
   
+  // make sure the source got added by logging the current map state to the console
+  console.log(map.getStyle().sources)
+  
     map.addSource('NHFPC', {
     type: 'geojson',
     data: './china.geojson',
   });
-  
-  // make sure the source got added by logging the current map state to the console
-  console.log(map.getStyle().sources)
    
   // add a layer for different provinces
   map.addLayer({
