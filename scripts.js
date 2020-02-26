@@ -243,6 +243,11 @@ map.on('style.load', function() {
         }
     })
   
+    map.addSource('NHFPC', {
+    type: 'geojson',
+    data: './china.geojson',
+  });
+  
   // add a layer for different provinces
   map.addLayer({
     id: 'fill-map-province',
