@@ -224,10 +224,10 @@ map.on('style.load', function() {
     data: './china.geojson',
   });
  
-  // let's make sure the source got added by logging the current map state to the console
+  // make sure the source got added by logging the current map state to the console
   console.log(map.getStyle().sources)
 
-  // add a layer for our custom source
+  // add a layer for different provinces
   map.addLayer({
     id: 'fill-map-province',
     type: 'fill',
@@ -399,18 +399,16 @@ map.on('style.load', function() {
   
   map.addSource('NHFPC', {
     type: 'geojson',
-    data: './china.geojson',
+    data: {
+      type: 'FeatureCollection',
+      features: []
+    }
   });
   
   map.addLayer({
     id: 'fill-map-province',
     type: 'line',
     source: 'fill-map-province',
-    layout: {
-      'visibility': 'visible',
-      'line-join': 'round',
-      'line-cap':'round'
-        },
     paint: {
       'line-color': 'white',
       'line-width': 1,
