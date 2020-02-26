@@ -398,17 +398,17 @@ map.on('style.load', function() {
   })
   
   map.addLayer({
-    'id': 'fill-map-province',
-    'type': 'line',
-     'source': 'fill-map-province',
-    'layout': {
-    'visibility': 'visible',
-    'line-join': 'round',
-    'line-cap': 'round'
+    id: 'fill-map-province',
+    type: 'line',
+    source: 'fill-map-province',
+    layout: {
+    visibility: 'visible',
+    line-join: 'round',
+    line-cap:'round'
         },
-     'paint': {
-    'line-color': 'white',
-    'line-width': 1
+    paint: {
+    line-color: 'white',
+    line-width: 1
         }
 });
   
