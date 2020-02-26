@@ -224,31 +224,10 @@ map.on('style.load', function() {
     data: './china.geojson',
   });
  
-  map.addLayer({
-    id: 'fill-map-province',
-    type: 'line',
-    source: 'NHFPC',
-    layout: {
-      'visibility': 'visible',
-      'line-join': 'round',
-      'line-cap': 'round'
-        },
-    paint: {
-      'line-color': 'white',
-      'line-width': 1,
-      'line-opacity': 0.9,
-        }
-    })
-  
-  // make sure the source got added by logging the current map state to the console
+  // let's make sure the source got added by logging the current map state to the console
   console.log(map.getStyle().sources)
-  
-    map.addSource('NHFPC', {
-    type: 'geojson',
-    data: './china.geojson',
-  });
-   
-  // add a layer for different provinces
+
+  // add a layer for our custom source
   map.addLayer({
     id: 'fill-map-province',
     type: 'fill',
@@ -405,7 +384,7 @@ map.on('style.load', function() {
       type: 'FeatureCollection',
       features: []
     }
-  });
+  })
   
   map.addLayer({
     id: 'highlight-line',
@@ -416,9 +395,7 @@ map.on('style.load', function() {
       'line-opacity': 0.9,
       'line-color': 'white',
         }
-  })
-  
-
+  });
   
   // listen for the mouse moving over the map and react when the cursor is over our data
 
@@ -438,7 +415,6 @@ map.on('style.load', function() {
         <h4>${hoveredFeature.properties.name}</h4>
         <p><strong>Total Confirmed Cases:</strong> ${hoveredFeature.properties.TCC}</p>
         <p><strong>Cured Cases:</strong> ${hoveredFeature.properties.CC}</p>
-
       `
       $('#feature-info').html(featureInfo)
 
